@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushrith-Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/351/351456.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(243, 244, 255);
+            overflow: hidden; 
+            background-image: url('https://www.pixel4k.com/wp-content/uploads/2018/09/skyscrapers-view-from-below-architecture-4k_1538066592.jpg');
+            background-size: cover;
+        }
+
+        header {
+            padding: 5px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards; 
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color:white;
+            text-decoration: none;
+            padding: 10px 30px;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        nav a.active {
+            color: red;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+        }
+
+        .footer1 {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: flex-start;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .social-media a ion-icon {
+            color: white;
+            font-size: 30px;
+        }
+
+        .social-media a:hover ion-icon {
+            color: red;
+            transform: translateY(5px);
+        }
+
+        .loginp {
+            font-size: 70px;
+            float: left;
+            color: white;
+            padding-left: 100px;
+            font-weight: bold;
+            margin-top: 80px;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s; 
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+        .login-container {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200px; 
+    margin-left: auto;
+    margin-right: 150px; 
+    border: 2px solid white;
+    opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+    
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: white;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.loginbutton {
+    width: 300px;
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.loginbutton:hover {
+    background-color: red;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-brand">
+        </div>
+        <nav>
+            <a href="Home2.html">Home</a>
+            <a href="AboutMe.html" >About</a>
+            <a href="ContactMe.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <div id="contactSection">
+        <p class="loginp"><b>Contact me for job offers</b</p>
+            <form action="ThankYou.html" method="get">
+            <div class="login-container">
+            <form class="login-form">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Ex:John" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+                <label for="comments">Comments/Queries:</label>
+                <textarea style="border-radius: 8px;"id="comments" name="comments" placeholder="Type your comments or queries here..."></textarea>
+                <br>
+                <br>
+                <button class="loginbutton" type="submit" style="font-weight: bolder;">Submit</button>
+            </form>
+        </div>
+            </form>
+    </div>
+    <div class="footer1">
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </div>
+    </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('div[id]');
+            const navLinks = document.querySelectorAll('nav a');
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    const sectionId = section.getAttribute('id');
+                    const correspondingLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    if (correspondingLink) {
+                        correspondingLink.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        const close = document.querySelector(".close");
+        const open = document.querySelector(".ham");
+        const menu = document.querySelector(".menu");
+        close.addEventListener("click", () => {
+            menu.style.visibility = "hidden";
+        });
+        open.addEventListener("click", () => {
+            menu.style.visibility = "visible";
+        });
+    </script>
+    <script>
+        setTimeout(function () {
+            document.body.style.overflow = "visible";
+        }, 1000); 
+    </script>
+</body>
+
+</html>
